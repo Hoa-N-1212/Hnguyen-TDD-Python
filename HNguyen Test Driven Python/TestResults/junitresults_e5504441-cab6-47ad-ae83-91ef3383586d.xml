@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.022" timestamp="2025-11-18T11:00:32.640870-06:00" hostname="HoaLaptop"><testcase classname="Project.HNguyen unit tests.refreshingAssignment_test" name="test_drinkGetBase" file="Project\HNguyen unit tests\refreshingAssignment_test.py" line="10" time="0.001"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase></testsuite></testsuites>

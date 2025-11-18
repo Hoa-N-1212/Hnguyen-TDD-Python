@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="11" time="0.088" timestamp="2025-11-17T14:23:51.715246-06:00" hostname="HoaLaptop"><testcase classname="Project.HNguyen unit tests.refreshingAssignment_test" name="test_drinkGetBase" file="Project\HNguyen unit tests\refreshingAssignment_test.py" line="10" time="0.001"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="Project.HNguyen unit tests.refreshingAssignment_test" name="test_drinkGetFlavor" file="Project\HNguyen unit tests\refreshingAssignment_test.py" line="14" time="0.000"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="Project.HNguyen unit tests.refreshingAssignment_test" name="test_drinkGetNumFlavor" file="Project\HNguyen unit tests\refreshingAssignment_test.py" line="22" time="0.001"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="Project.HNguyen unit tests.refreshingAssignment_test" name="test_drinkSetBase" file="Project\HNguyen unit tests\refreshingAssignment_test.py" line="31" time="0.001"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="Project.HNguyen unit tests.refreshingAssignment_test" name="test_drinkSetFlavors" file="Project\HNguyen unit tests\refreshingAssignment_test.py" line="41" time="0.000"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="Project.HNguyen unit tests.refreshingAssignment_test" name="test_orderAddItem" file="Project\HNguyen unit tests\refreshingAssignment_test.py" line="81" time="0.001"><failure message="TypeError: &lt;refreshingAssignment.Order object at 0x00000256F4C83A10&gt; is not a drink instance">def test_orderAddItem():
+        '''adds a second instance of the first order'''
+&gt;       testOrder.add_item(testOrder)
+
+Project\HNguyen unit tests\refreshingAssignment_test.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;refreshingAssignment.Order object at 0x00000256F4C83A10&gt;
+drink = &lt;refreshingAssignment.Order object at 0x00000256F4C83A10&gt;
+
+    def add_item(self, drink):
+        if not isinstance(drink,Drink):
+&gt;           raise TypeError(f"{drink} is not a drink instance")
+E           TypeError: &lt;refreshingAssignment.Order object at 0x00000256F4C83A10&gt; is not a drink instance
+
+Project\HNguyen unit tests\refreshingAssignment.py:58: TypeError</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="Project.HNguyen unit tests.refreshingAssignment_test" name="test_orderGetAllItem" file="Project\HNguyen unit tests\refreshingAssignment_test.py" line="49" time="0.000"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="Project.HNguyen unit tests.refreshingAssignment_test" name="test_orderGetItem" file="Project\HNguyen unit tests\refreshingAssignment_test.py" line="57" time="0.000"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="Project.HNguyen unit tests.refreshingAssignment_test" name="test_orderGetNumItems" file="Project\HNguyen unit tests\refreshingAssignment_test.py" line="61" time="0.000"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="Project.HNguyen unit tests.refreshingAssignment_test" name="test_orderGetReciept" file="Project\HNguyen unit tests\refreshingAssignment_test.py" line="65" time="0.000"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="Project.HNguyen unit tests.refreshingAssignment_test" name="test_orderGetTotal" file="Project\HNguyen unit tests\refreshingAssignment_test.py" line="73" time="0.001"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+not implemented as it requires what each base and flavor would cost
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase></testsuite></testsuites>
