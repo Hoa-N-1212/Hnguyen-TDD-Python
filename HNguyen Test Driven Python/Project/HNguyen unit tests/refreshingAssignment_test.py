@@ -69,14 +69,17 @@ def test_orderGetReciept():
 
 # remove and retest once implemeted
 def orderGetTotalError():
+    '''replace when specified'''
     testOrder.get_total()
 
 def test_orderGetTotal():
+    '''replace when specified'''
     with pytest.raises(NotImplementedError):
         orderGetTotalError()
 
 #%% order setter tests
 def orderAddItemError():
+    '''forces an error from add_item'''
     testOrder.add_item("blahbalbh")
 
 def test_orderAddItem():
