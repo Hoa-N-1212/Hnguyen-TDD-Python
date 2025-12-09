@@ -1,6 +1,6 @@
 from os import error
 import pytest
-from CirnosAPI import order as OrderSys, drink as DrinkSys, food as FoodSys
+from CirnosAPI import order as OrderSys, drink as DrinkSys, food as FoodSys, icestorm as StormSys
 
 '''
 Added Order Tests in Sprint 2
@@ -9,6 +9,7 @@ Added Order Tests in Sprint 2
 testDrink = DrinkSys.Drink("hill fog",["blueberry","lime"],"small")
 testDrink2 = DrinkSys.Drink("water",["cherry"],"medium")
 testFood = FoodSys.Food("hotdog", "chili")
+testStorm2 = StormSys.Storm("Chocolate",["pecans"])
 testOrder = OrderSys.Order([testDrink,testDrink2,testFood])
 
 #%% order getter tests
@@ -33,9 +34,9 @@ def test_orderGetReciept():
     assert isinstance(testOrder.get_reciept(),str)
 
 def test_orderGetTotal():
-    '''returns the price of the order, small(1.5) and two flavors(.3)'''
-    testOrder2 = OrderSys.Order([DrinkSys.Drink("water",["cherry","strawberry"],"small"), FoodSys.Food("tater tots", "bacon bits")])
-    assert testOrder2.get_total() == 3.8
+    '''returns the price of the order, should be 7.3 as of sprint 4'''
+    testOrder2 = OrderSys.Order([DrinkSys.Drink("water",["cherry","strawberry"],"small"), FoodSys.Food("tater tots", "bacon bits"),testStorm2])
+    assert testOrder2.get_total() == 7.3
 
 def test_orderGetTax():
     '''should return tax of the order'''

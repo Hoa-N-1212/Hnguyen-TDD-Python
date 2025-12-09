@@ -1,16 +1,18 @@
 from os import error
 from CirnosAPI import drink as DrinkSys
 from CirnosAPI import food as FoodSys
+from CirnosAPI import icestorm as StormSys
 '''
 Created Order object in Sprint 1
 Added get_tax and get_reciept in Sprint 2 additions
-Implemented the Food module into the order Class in Sprint 3
+Implemented the Food module into the order class in sprint 3
+Implemented the Ice storm module into order class in sprint 4
 '''
 tax = .0725
 
 #%% Order class
 class Order:
-    '''contains a list of Drink and Food'''
+    '''contains a list of Drink, Food, or Ice storm'''
     _items = []
 
     def __init__(self,items):
@@ -38,6 +40,7 @@ class Order:
         sizeCost = 0
         flavorCost = 0
         foodCost = 0
+        stormCost = 0
         for item in self._items:
             if isinstance(item,DrinkSys.Drink):
                 # iterate through each size and add the price for whichever base is given
@@ -45,8 +48,10 @@ class Order:
                 # add .15 for each flavor
                 flavorCost += item.get_flavor_cost()
             if isinstance(item,FoodSys.Food):
-                foodCost = item.get_total()
-        return sizeCost+flavorCost+foodCost
+                foodCost += item.get_total()
+            if isinstance(item,StormSys.Storm):
+                stormCost += item.get_total()
+        return sizeCost+flavorCost+foodCost+stormCost
 
     def get_tax(self):
         '''returns total tax of the order'''
@@ -62,6 +67,8 @@ class Order:
                 recieptString = f"{recieptString} {item.get_base()} with {", ".join(item.get_flavors())}:: ${round(item.get_total()+item.get_tax(),2)} (${round(item.get_tax(),2)})tax \n"
             if isinstance(item,FoodSys.Food):
                 recieptString = f"{recieptString} {item.get_food()} with {item.get_topping()}:: ${round(item.get_total()+item.get_tax(),2)} (${round(item.get_tax(),2)})tax \n"
+            if isinstance(item,StormSys.Storm):
+                recieptString = f"{recieptString} {item.get_flavor()} with {", ".join(item.get_toppings())}:: ${round(item.get_total()+item.get_tax(),2)} (${round(item.get_tax(),2)})"
         return recieptString+f"\nTotal:${round(self.get_total()+self.get_tax(),2)} (${round(self.get_tax(),2)})tax"
 
     # extra credit addon (1)

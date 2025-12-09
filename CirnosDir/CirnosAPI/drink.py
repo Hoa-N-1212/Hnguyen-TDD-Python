@@ -1,7 +1,6 @@
 from os import error,path
 import csv
 from pathlib import Path
-from string.templatelib import convert
 optionsDir = Path(__file__).parent.parent.joinpath("Order_Options")
 with open(optionsDir.joinpath("Drink_Bases.csv"), newline='') as baseFile:
     baseReader = csv.reader(baseFile)
